@@ -1,0 +1,740 @@
+
+/* ===== 1. Global Styles ===== */
+:root {
+    --black: #10100f;
+    --dark: #181714;
+    --gold: #d6b36a;
+    --white: #f8f6f0;
+    --muted: #b9b5aa;
+    --border: rgba(214, 179, 106, 0.25);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    background: var(--black);
+    color: var(--white);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+span {
+    color: var(--gold);
+}
+
+.section {
+    padding: 100px 8%;
+}
+
+/* ===== 2. Navigation ===== */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(16, 16, 15, 0.96);
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+    max-width: 1400px;
+    min-height: 82px;
+    margin: auto;
+    padding: 16px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--muted);
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+.nav-button {
+    border: 1px solid var(--gold);
+    padding: 10px 18px;
+    color: var(--gold);
+    font-size: 13px;
+    transition: 0.3s ease;
+}
+
+.nav-button:hover {
+    background: var(--gold);
+    color: var(--black);
+}
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    color: var(--gold);
+    border: 1px solid var(--border);
+    padding: 5px 12px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* ===== 3. Hero Banner ===== */
+.hero {
+    min-height: 620px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 100px 10%;
+    overflow: hidden;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(10, 10, 9, 0.94) 0%,
+            rgba(10, 10, 9, 0.72) 55%,
+            rgba(10, 10, 9, 0.20) 100%
+        ),
+        url("https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=2000&q=85")
+        center / cover no-repeat;
+}
+
+.hero-content {
+    max-width: 760px;
+    position: relative;
+    z-index: 1;
+}
+
+.eyebrow {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(42px, 6vw, 76px);
+    line-height: 1.15;
+    font-weight: 500;
+    margin-bottom: 24px;
+}
+
+.hero h1 span {
+    display: block;
+    color: var(--gold);
+}
+
+.hero-text {
+    max-width: 520px;
+    color: #e0ddd5;
+    margin-bottom: 32px;
+}
+
+.gold-button {
+    display: inline-block;
+    border: 1px solid var(--gold);
+    background: var(--gold);
+    color: var(--black);
+    padding: 13px 25px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.gold-button:hover {
+    background: transparent;
+    color: var(--gold);
+}
+
+.hero-note {
+    position: absolute;
+    bottom: 28px;
+    right: 8%;
+    color: var(--white);
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.gold-line {
+    display: inline-block;
+    width: 35px;
+    height: 2px;
+    background: var(--gold);
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* ===== 4. About Section ===== */
+.intro {
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+.intro h2,
+.section-heading h2,
+.contact h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 500;
+    line-height: 1.3;
+    margin-bottom: 22px;
+}
+
+.intro h2 span {
+    display: block;
+}
+
+.intro > p:last-child {
+    max-width: 650px;
+    margin: auto;
+    color: var(--muted);
+}
+
+/* ===== 5. Property Collection ===== */
+.properties {
+    background: var(--dark);
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 25px;
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    margin-bottom: 0;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filter {
+    padding: 9px 17px;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    background: transparent;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.filter:hover,
+.filter.active {
+    background: var(--gold);
+    color: var(--black);
+    border-color: var(--gold);
+}
+
+.property-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+}
+
+.property-card {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: var(--black);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.property-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--gold);
+}
+
+.property-card > img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.property-card:hover > img {
+    transform: scale(1.03);
+}
+
+.property-info {
+    padding: 24px;
+}
+
+.property-type {
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.property-info h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.location {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 22px;
+}
+
+.property-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    border-top: 1px solid var(--border);
+    padding-top: 18px;
+}
+
+.price {
+    color: var(--gold);
+    font-size: 13px;
+}
+
+.details-link {
+    color: var(--white);
+    font-size: 13px;
+}
+
+.details-link:hover {
+    color: var(--gold);
+}
+
+.disclaimer {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 30px;
+}
+
+/* ===== 6. Contact Form ===== */
+.contact {
+    max-width: 900px;
+    margin: auto;
+}
+
+.contact > p:not(.eyebrow) {
+    color: var(--muted);
+    margin-bottom: 25px;
+}
+
+.contact form {
+    display: grid;
+    gap: 12px;
+    margin-top: 35px;
+}
+
+.contact label {
+    color: var(--gold);
+    font-size: 13px;
+}
+
+.contact input,
+.contact select,
+.contact textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid var(--border);
+    border-radius: 0;
+    background: var(--dark);
+    color: var(--white);
+    outline: none;
+}
+
+.contact input:focus,
+.contact select:focus,
+.contact textarea:focus {
+    border-color: var(--gold);
+}
+
+.contact input::placeholder,
+.contact textarea::placeholder {
+    color: #99958a;
+}
+
+.contact select option {
+    background: var(--dark);
+    color: var(--white);
+}
+
+.contact textarea {
+    resize: vertical;
+}
+
+.contact form .gold-button {
+    justify-self: start;
+    margin-top: 12px;
+}
+
+#formMessage {
+    color: var(--gold);
+    font-size: 14px;
+}
+
+/* ===== 7. Footer ===== */
+.footer {
+    text-align: center;
+    padding: 45px 8%;
+    border-top: 1px solid var(--border);
+    background: #0b0b0a;
+}
+
+.footer .logo {
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.footer p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+.footer .copyright {
+    font-size: 12px;
+    margin-top: 18px;
+}
+
+/* ===== 8. Tablet Layout ===== */
+@media (max-width: 1000px) {
+    .navbar {
+        padding-left: 5%;
+        padding-right: 5%;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 16px;
+    }
+
+    .section {
+        padding: 80px 5%;
+    }
+
+    .property-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .hero {
+        padding-left: 7%;
+    }
+}
+
+/* ===== 9. Mobile Layout ===== */
+@media (max-width: 700px) {
+    .navbar {
+        min-height: 72px;
+        flex-wrap: wrap;
+        position: relative;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: 20px 5%;
+        background: var(--dark);
+        border-bottom: 1px solid var(--border);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .hero {
+        min-height: 540px;
+        padding: 75px 6%;
+        background-position: center;
+    }
+
+    .hero h1 {
+        font-size: clamp(38px, 10vw, 55px);
+    }
+
+    .hero-note {
+        right: 6%;
+        left: 6%;
+        font-size: 9px;
+    }
+
+    .section {
+        padding: 65px 6%;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .property-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .property-card > img {
+        height: 250px;
+    }
+
+    .intro h2,
+    .section-heading h2,
+    .contact h2 {
+        font-size: 34px;
+    }
+}
+
+/* ===== 10. Small Phones ===== */
+@media (max-width: 380px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .property-info {
+        padding: 18px;
+    }
+
+    .filters {
+        gap: 6px;
+    }
+
+    .filter {
+        padding: 8px 12px;
+    }
+}
+
+/* Property Description and Features */
+
+.property-description {
+    color: #c5c5c5;
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 12px 0;
+}
+
+.property-features {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 18px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.property-features li {
+    color: #d4af37;
+    border: 1px solid #6b5720;
+    border-radius: 4px;
+    padding: 6px 9px;
+    font-size: 12px;
+}
+
+/* Property Image Zoom Effect */
+
+.property-card img {
+    transition: transform 0.4s ease;
+}
+
+.property-card:hover img {
+    transform: scale(1.05);
+}
+
+/* WhatsApp Button Style */
+
+.whatsapp-button {
+    display: inline-block;
+    background-color: #25D366;
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.whatsapp-button:hover {
+    background-color: #1da851;
+    transform: translateY(-2px);
+}
+
+/* ===== Professional Property Popup ===== */
+
+.property-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.property-modal.active {
+    display: flex;
+}
+
+.modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    max-height: 85vh;
+    overflow-y: auto;
+    background: #111111;
+    color: #ffffff;
+    border: 1px solid #d4af37;
+    border-radius: 12px;
+    padding: 35px;
+    box-shadow: 0 15px 50px rgba(212, 175, 55, 0.2);
+}
+
+.modal-content h2 {
+    color: #d4af37;
+    margin: 12px 0;
+}
+
+.modal-content p {
+    line-height: 1.7;
+}
+
+.modal-content ul {
+    padding-left: 20px;
+    margin: 20px 0;
+}
+
+.modal-content li {
+    color: #d4af37;
+    margin-bottom: 10px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    color: #d4af37;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    color: #ffffff;
+}
+
+#modalEnquire {
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        padding: 25px 20px;
+    }
+}
+
+/* ===== Property Popup Image ===== */
+
+.modal-image {
+    display: block;
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #d4af37;
+    margin: 15px 0 20px;
+}
+
+/* ===== Popup Property Features ===== */
+
+#modalFeatures {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#modalFeatures li {
+    background: #1b1b1b;
+    color: #d4af37;
+    border: 1px solid #6b5720;
+    border-radius: 6px;
+    padding: 9px 12px;
+    font-size: 14px;
+}

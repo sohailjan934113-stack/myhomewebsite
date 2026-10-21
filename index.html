@@ -1,0 +1,374 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Discover exceptional luxury houses and villas with Luxe Homes.">
+    <title>Luxe Homes | Luxury Real Estate</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Header and Navigation -->
+    <header class="header">
+        <nav class="navbar" aria-label="Main navigation">
+
+            <a href="#home" class="logo">
+                LUXE<span>HOMES</span>
+            </a>
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button"
+                aria-label="Toggle navigation"
+                aria-controls="navLinks"
+                aria-expanded="false">
+                ☰
+            </button>
+
+            <div class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#properties">Properties</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <a href="#contact" class="nav-button">
+                Get in Touch
+            </a>
+
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <p class="eyebrow">FIND YOUR DREAM HOME</p>
+
+                <h1>
+                    Luxury Living.
+                    <span>Exceptional Homes.</span>
+                </h1>
+
+                <p class="hero-text">
+                    Discover beautiful properties designed for
+                    comfort, elegance and modern living.
+                </p>
+
+                <a href="#properties" class="gold-button">
+                    Explore Properties →
+                </a>
+
+            </div>
+
+            <div class="hero-note">
+                <span class="gold-line"></span>
+                YOUR NEXT CHAPTER STARTS HERE
+            </div>
+
+        </section>
+
+        <!-- About Section -->
+        <section class="intro section" id="about">
+
+            <p class="eyebrow">ABOUT LUXE HOMES</p>
+
+            <h2>
+                More Than a House.
+                <span>A Place to Belong.</span>
+            </h2>
+
+            <p>
+                We help you explore homes that match your lifestyle,
+                from modern family houses to elegant luxury villas.
+            </p>
+
+        </section>
+
+        <!-- Properties Section -->
+        <section class="properties section" id="properties">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="eyebrow">OUR COLLECTION</p>
+                    <h2>Featured <span>Properties</span></h2>
+                </div>
+
+                <div class="filters" aria-label="Filter properties">
+                    <button
+                        type="button"
+                        class="filter active"
+                        data-filter="all"
+                        aria-pressed="true">
+                        All
+                    </button>
+
+                    <button
+                        type="button"
+                        class="filter"
+                        data-filter="house"
+                        aria-pressed="false">
+                        Houses
+                    </button>
+
+                    <button
+                        type="button"
+                        class="filter"
+                        data-filter="villa"
+                        aria-pressed="false">
+                        Villas
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="property-grid">
+
+                <!-- Property 1 -->
+                <article class="property-card" data-type="house">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=900&q=80"
+                        alt="Modern luxury family house"
+                        loading="lazy">
+
+                    <div class="property-info">
+
+                        <p class="property-type">MODERN HOUSE</p>
+
+                        <h3>Contemporary Family Home</h3>
+
+                        <p class="location">
+                            Prime Residential Area
+                        </p>
+                        <p class="property-description">
+    Spacious family home with modern design
+    and comfortable living spaces.
+</p>
+
+<ul class="property-features">
+    <li>3 Bedrooms</li>
+    <li>2 Bathrooms</li>
+    <li>Parking Available</li>
+</ul>
+
+                        <div class="property-bottom">
+                            <span class="price">Contact for price</span>
+                            <p class="modal-price">Contact for price</p>
+                            <a href="#contact" class="details-link">
+                        View Details ↗
+</a>
+                            </a>
+                        </div>
+
+                    </div>
+                </article>
+
+                <!-- Property 2 -->
+                <article class="property-card" data-type="villa">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=900&q=80"
+                        alt="Elegant luxury villa"
+                        loading="lazy">
+
+                    <div class="property-info">
+
+                        <p class="property-type">LUXURY VILLA</p>
+
+                        <h3>Elegant Private Villa</h3>
+                        <p class="property-description">
+    Elegant private villa with stylish architecture
+    and spacious family living areas.
+</p>
+
+<ul class="property-features">
+    <li>4 Bedrooms</li>
+    <li>3 Bathrooms</li>
+    <li>Private Garden</li>
+</ul>
+
+                        <p class="location">
+                            Exclusive Neighbourhood
+                        </p>
+                        <div class="property-bottom">
+                            <span class="price">Contact for price</span>
+                            <a href="#contact" class="details-link">
+                                view details
+                            </a>
+                        </div>
+
+                    </div>
+                </article>
+
+                <!-- Property 3 -->
+                <article class="property-card" data-type="house">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80"
+                        alt="Contemporary architectural home"
+                        loading="lazy">
+
+                    <div class="property-info">
+
+                        <p class="property-type">DESIGNER HOME</p>
+
+                        <h3>Modern Architectural Home</h3>
+                        <p class="property-description">
+    A contemporary designer home with elegant
+    interiors and a peaceful setting.
+</p>
+
+<ul class="property-features">
+    <li>3 Bedrooms</li>
+    <li>3 Bathrooms</li>
+    <li>Modern Interior</li>
+</ul>
+
+                        <p class="location">
+                            Peaceful Community
+                        </p>
+
+                        <div class="property-bottom">
+                            <span class="price">Contact for price</span>
+                            <a href="#contact" class="details-link">
+                                view details
+                            </a>
+                        </div>
+
+                    </div>
+                </article>
+
+            </div>
+
+            <p class="disclaimer">
+                Demo listings for learning purposes.
+                Availability and prices must be confirmed.
+            </p>
+
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact section" id="contact">
+
+            <p class="eyebrow">LET'S CONNECT</p>
+
+            <h2>
+                Find Your <span>Perfect Home</span>
+            </h2>
+
+            <p>
+                Tell us how to contact you and what kind of home
+                you are looking for.
+            </p>
+            <form
+    action="https://formsubmit.co/sohailjan934113@gmail.com"
+    method="POST"
+    id="contactForm">
+
+                <label for="name">Your Name</label>
+                <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    placeholder="Enter your name"
+                    required>
+
+                <label for="email">Email Address</label>
+                <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="Enter your email"
+                    required>
+
+                <label for="interest">Property Type</label>
+                <select id="interest" name="interest" required>
+                    <option value="">Choose a property</option>
+                    <option value="house">House</option>
+                    <option value="villa">Villa</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="message">Your Message</label>
+                <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Tell us what you need"
+                    rows="4"
+                    required></textarea>
+
+                <button class="gold-button" type="submit">
+                    Send Enquiry →
+                </button>
+                <a
+    class="WhatsApp"
+    href="https://wa.me/923379063391"
+    target="_blank"
+    rel="noopener">
+    Contact Us on WhatsApp
+</a>
+
+                <p id="formMessage" role="status" aria-live="polite"></p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <a href="#home" class="logo">
+            LUXE<span>HOMES</span>
+        </a>
+
+        <p>Luxury spaces. Thoughtful living.</p>
+
+        <p class="copyright">
+            © <span id="year">2026</span> Luxe Homes.
+            Demo website.
+        </p>
+
+    </footer>
+    <!-- Property Details Popup -->
+<div class="property-modal" id="propertyModal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true"
+         aria-labelledby="modalTitle">
+
+        <button type="button" class="modal-close"
+                id="modalClose" aria-label="Close popup">
+            &times;
+        </button>
+
+        <p class="eyebrow">LUXE HOMES</p>
+        <img
+    id="modalImage"
+    src=""
+    alt="Property image"
+    class="modal-image">
+        <h2 id="modalTitle">Property Details</h2>
+        <p id="modalDescription"></p>
+        <ul id="modalFeatures"></ul>
+
+        <a href="#contact" class="gold-button" id="modalEnquire">
+            Enquire About This Property →
+        </a>
+    </div>
+</div>
+
+</body>
+</html>
