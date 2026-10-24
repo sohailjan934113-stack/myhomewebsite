@@ -1,0 +1,127 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login | Luxe Homes</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #101010;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        .login-box {
+            width: 90%;
+            max-width: 400px;
+            padding: 32px;
+            background: #1b1b1b;
+            border: 1px solid #c9a227;
+            border-radius: 12px;
+        }
+
+        h1 {
+            color: #c9a227;
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+            color: #ccc;
+        }
+
+        input, button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 14px;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        input {
+            background: #292929;
+            border: 1px solid #555;
+            color: white;
+        }
+
+        button {
+            background: #c9a227;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #message {
+            overflow-wrap: anywhere;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <h1>LUXE HOMES</h1>
+        <p>Admin Login</p>
+
+        <form id="loginForm">
+            <input
+                type="email"
+                id="email"
+                placeholder="Admin Email"
+                autocomplete="username"
+                required
+            >
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Password"
+                autocomplete="current-password"
+                required
+            >
+
+            <button type="submit">Login</button>
+            <p id="message" role="status"></p>
+        </form>
+    </div>
+
+    <script type="module">
+        import { auth } from "./firebase.js";
+        import {
+            signInWithEmailAndPassword
+        } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
+
+        const loginForm = document.getElementById("loginForm");
+        const message = document.getElementById("message");
+
+        loginForm.addEventListener("submit", async (event) => {
+            event.preventDefault();
+
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value;
+
+            message.textContent = "Logging in...";
+
+            try {
+                await signInWithEmailAndPassword(auth, email, password);
+                message.textContent = "Login successful!";
+                window.location.href = "admin.html";
+            } catch (error) {
+                message.textContent =
+                    "Login failed. Please check your email and password.";
+                console.error("Firebase login error:", error.code);
+            }
+        });
+    </script>
+</body>
+</html>
+```

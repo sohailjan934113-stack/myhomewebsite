@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyHome - Admin Panel</title>
+    
+<link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>MyHome</h2>
+            <p>Admin Panel</p>
+
+            <nav>
+                <a href="#dashboard">Dashboard</a>
+                <a href="#properties">Properties</a>
+                <a href="#inquiries">Inquiries</a>
+                <a href="#users">Users</a>
+            </nav>
+        </aside>
+        
+<section class="property-manager">
+    <h2>Add New Property</h2>
+
+    <form id="propertyForm">
+        <label for="houseName">House Name</label>
+        <input type="text" id="houseName"
+               placeholder="Enter house name" required>
+
+        <label for="housePrice">Price</label>
+        <input type="number" id="housePrice"
+               placeholder="Enter house price" required>
+
+        <label for="houseLocation">Location</label>
+        <input type="text" id="houseLocation"
+               placeholder="Enter house location" required>
+
+        <button type="submit">Add Property</button>
+    </form>
+
+    <h2>Property List</h2>
+    <div id="propertyList"></div>
+</section>
+
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <header class="topbar">
+                <h1>Dashboard</h1>
+                <p>Welcome, Admin!</p>
+            </header>
+
+            <section class="dashboard-cards" id="dashboard">
+
+                <div class="card" id="properties">
+                    <h3>Total Properties</h3>
+                    <p>12</p>
+                </div>
+
+                <div class="card" id="inquiries">
+                    <h3>Total Inquiries</h3>
+                    <p>8</p>
+                </div>
+
+                <div class="card" id="users">
+                    <h3>Total Users</h3>
+                    <p>25</p>
+                </div>
+
+            </section>
+
+            <section class="welcome-section">
+                <h2>Manage Your Website</h2>
+                <p>Manage properties and customer inquiries from here.</p>
+            </section>
+
+        </main>
+
+    </div>
+
+```html
+<script type="module" src="admin.js"></script>
+```
+
+</body>
+
+</html>
