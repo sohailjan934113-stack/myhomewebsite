@@ -1,4 +1,4 @@
-```javascript
+import { auth } from "./firebase.js";
 import { auth } from "./firebase.js";
 import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
 
@@ -7,7 +7,6 @@ onAuthStateChanged(auth, (user) => {
         window.location.href = "login.html";
     }
 });
-```
 console.log("MyHome Admin Panel is working!");
 
 // Load saved properties from Local Storage
